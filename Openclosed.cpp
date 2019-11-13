@@ -41,6 +41,10 @@ template <typename T> struct Specification
 {
     // Pure virtual function which has a boolean function that returns
     virtual bool is_satisfied(T* item) const = 0;
+
+    AndSpecification<T> operator&&(Specification<T>& other){
+        
+    }
 };
 
 template <typename T> struct Filter
